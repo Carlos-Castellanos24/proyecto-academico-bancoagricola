@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;1,300;1,400;1,500;1,600&display=swap');
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+.container-index{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pag-name {
+    margin-top: 3%;
+    width: 100%;
+    text-align: center;
+
+}
+
+.pag-name h2 {
+    font-weight: bold;
+    font-family: 'Open Sans', 'sans-serif';
+    text-transform: uppercase;
+}

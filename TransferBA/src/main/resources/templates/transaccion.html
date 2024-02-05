@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+    <th:block th:replace="~{fragments/configs :: headConfigs}"></th:block>
+    <link rel="stylesheet" href="/css/headerLoginOn.css">
+    <link rel="stylesheet" href="/css/transacciones.css">
+    <title>Transferir</title>
+</head>
+<body>
+<div th:replace="~{fragments/header :: headerWithLoginOn}"></div>
+<div class="pag-name">
+    <h2>Realizar transferencia</h2>
+</div>
+<div class="container">
+    <hr class="divider1">
+</div>
+<div class="main-transfer">
+    <div class="container container2">
+        <form class="form-transferencia" th:action="@{/realizarTransferencia}" th:object="${transaccion}" method="post">
+            <div th:if="${cuentaInexistente != null}">
+                <p><span class="span-error">[[${cuentaInexistente}]]</span></p>
+            </div>
+            <div th:if="${cuentaInactiva != null}">
+                <p><span class="span-error">[[${cuentaInactiva}]]</span></p>
+            </div>
+            <div th:if="${cuentaPropia != null}">
+                <p><span class="span-error">[[${cuentaPropia}]]</span></p>
+            </div>
+            <div th:if="${saldoInsuficiente != null}">
+                <p><span class="span-error">[[${saldoInsuficiente}]]</span></p>
+            </div>
+            <div th:if="${montoCero != null}">
+                <p><span class="span-error">[[${montoCero}]]</span></p>
+            </div>
+            <div class="form-group">
+                <label for="cuentaTelefono">Número de cuenta:</label>
+                <input type="text" class="form-control rounded-pill" id="cuentaTelefono" name="cuentaBeneficiaria"
+                       required="required">
+            </div>
+            <div class="form-group">
+                <label for="correo">Correo:</label>
+                <input type="email" class="form-control rounded-pill" id="correo" name="correoBeneficiario">
+            </div>
+            <div class="form-group">
+                <label for="texto">Concepto:</label>
+                <!--                <input type="text" class="form-control rounded-pill" id="texto" name="concepto" required="required">-->
+                <textarea type="text" class="form-control rounded-pill" id="texto" name="concepto"
+                          required="required"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="monto">Monto:</label>
+                <input type="number" class="form-control rounded-pill" id="monto" name="monto" required="required"
+                       oninput="validarInput(this)">
+            </div>
+            <div class="rounded p-3 my-3 bg-light">
+                <div class="form-group cuenta-emisor">
+                    <label for="tipoCuenta">Cuenta del emisor:</label>
+                    <select class="form-control rounded-pill" id="tipoCuenta" name="cuenta" required="required">
+                        <th:block th:each="cuenta : ${cuentas}">
+                            <option th:value="${cuenta.cuenta.idCuenta}"><span
+                                    th:text="'NUMERO DE CUENTA: ' + ' ' + ${cuenta.cuenta.numeroCuenta} + ' ' + 'SALDO: ' + '$' + ${cuenta.cuenta.saldo}"></span>
+                            </option>
+                        </th:block>
+                    </select>
+                </div>
+            </div>
+            <input type="hidden" th:value="${referencia}" name="referencia"/>
+            <input type="hidden" th:value="${autorizacion}" name="autorizacionKey"/>
+            <div class="document-btn-activity">
+                <div class="buttons">
+                    <a th:href="@{/inicio}">
+                        <button class="btn" type="button">Cancelar</button>
+                    </a>
+                    <input type="submit" value="Continuar" class="btn">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<script>
+    function validarInput(input) {
+        input.value = input.value.replace(/[^0-9.]/g, '');
+    }
+</script>
+<th:block th:replace="~{fragments/footer :: footerLoginOn}"></th:block>
+<th:block th:replace="~{fragments/configs :: scriptJs}"></th:block>
+</body>
+</html>

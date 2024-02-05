@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+    <head>
+    <th:block th:replace="~{fragments/configs :: headConfigs}"></th:block>
+    <link rel="stylesheet" href="/css/homepage.css">
+    <link rel="stylesheet" href="/css/headerLoginOn.css">
+    <title>Inicio</title>
+</head>
+<body>
+    <div th:replace="~{fragments/header :: headerWithLoginOn}"></div>
+    <div class="pag-name">
+        <h2>Bienvenido/a
+            <th:block th:text="${nombre.split(' ')[0] + ' ' + nombre.split(' ')[2]} "></th:block>
+        </h2>
+    </div>
+    <div class="container">
+        <hr class="divider1">
+    </div>
+    <div class="container-lists">
+        <div th:each="lista : ${listaCuentasCliente}" class="accounts">
+            <div class="account-details">
+                <div class="account-element-details">
+                    <div class="data-txt-details">
+                        <strong>Numero de cuenta: </strong><span th:text="${lista.cuenta.numeroCuenta}"></span>
+                    </div>
+                    <div class="data-txt-details">
+                        <strong>Tipo de cuenta: </strong><span th:text="${lista.cuenta.tipoCuenta.nombre}"></span>
+                    </div>
+                    <div class="data-txt-details">
+                        <strong>Saldo: </strong><span th:text="'$' + ${lista.cuenta.saldo}"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>   
+    <div class="container">
+        <div class="second">
+            <hr class="divider2">
+            <div class="document-btn-activity">
+                <div class="buttons">
+                    <a th:href="@{/transaccion}"><button class="btn" type="button"><i class="fa-solid fa-money-bill-transfer"></i>TRASFERIR</button></a>
+                    <a th:href="@{/movimientos}"><button class="btn" type="button">MOVIMIENTOS</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+<th:block th:replace="~{fragments/footer :: footerLoginOn}"></th:block>
+<th:block th:replace="~{fragments/configs :: scriptJs}"></th:block>
+</body>
+</html>

@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;1,300;1,400;1,500;1,600&display=swap');
+
+body {
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif !important;
+    width: auto;
+    height: auto;
+    background: url(../images/background.jpg);  
+}
+
+.header-login {
+    height: 66px;
+    border-bottom: 1px solid #000;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.4);
+}
+
+.configs-size {
+    margin-left: 50px !important;
+    margin-right: 50px !important;
+}
+
+.container {
+    margin-top: 5%;
+
+}
+
+.center-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.card-header {
+    text-align: center;
+    background-color: #ffffff;
+    color: #292929;
+    border-radius: 10px 10px 0 0;
+}
+.card-header h3{
+    font-weight: bold;
+}
+.form-group label{
+    font-weight: bold;
+}
+
+.card-body {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.btn-primary {
+    background-color: #ffc107;
+}
+
+.span-error {
+    color: red;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+.content-data-footer{
+    margin-bottom: 100px;
+}

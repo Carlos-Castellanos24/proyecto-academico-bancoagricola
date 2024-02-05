@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;1,300;1,400;1,500;1,600&display=swap');
+
+body {
+    background: url(https://www.ebanca.com/img/06.svg);
+    margin: 0;
+    font-family: 'Open Sans', sans-serif !important;
+    background-repeat: no-repeat;
+}
+
+.pag-name {
+    margin-top: 3%;
+    width: 100%;
+    text-align: center;
+
+}
+
+.pag-name h2 {
+    font-weight: bold;
+    font-family: 'Open Sans', 'sans-serif';
+    text-transform: uppercase;
+}
+
+.main {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10%;
+}
+
+.container {
+    width: 100%;
+}
+
+.divider1 {
+    width: 100%;
+    border: none;
+    height: 2px;
+    background-color: #424242;
+    margin: 0 0 2%;
+}
+
+.container-activity {
+    width: 90%;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+/*    border: 1px solid #ccc;*/
+    border-radius: 8px;
+}
+
+.document-btn-activity {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.buttons {
+    display: flex;
+}
+
+.btn {
+    flex: 1;
+    border-radius: 50px;
+    background-color: #fdda24;
+    color: #212529;
+    margin: 10px;
+    padding: 8px 16px;
+}
+
+.info {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.table-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.left-table, .right-table {
+    border-collapse: collapse;
+    width: 48%;
+
+}
+
+th {
+    text-align: center;
+    padding: 8px;
+    background-color: #000000;
+    color: #FFFFFF;
+    width: 100%;
+}
+
+td {
+    text-align: center;
+    padding: 8px;
+    background-color: #FFFFFF;
+    font-weight: bold;
+}
+
+th, td {
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+}
+.input-group-text {
+    background-color: #fdda24;
+    border: none;
+}
+#busqueda-saliente, #busqueda-entrante{
+    font-weight: bold;
+    color: black;
+}
+.mensajeErrorLista{
+    color: red;
+    font-weight: bold;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+
+    <head>
+    <th:block th:replace="~{fragments/configs :: headConfigs}"></th:block>
+    <link rel="stylesheet" href="/css/headerLoginOn.css">
+    <link rel="stylesheet" href="/css/profile.css">
+    <title>Detalle de Transaccion</title>
+</head>
+<body>
+    <div th:replace="~{fragments/header :: headerWithLoginOn}"></div>
+    <div class="pag-name">
+        <h2>¡TRANSFERENCIA SATISFACTORIA!</h2>
+    </div>
+    <div class="container">
+        <hr class="divider1">
+    </div>
+    <div class="container-info">
+        <div class="details-container">
+            <strong>REFERENCIA:</strong><span th:text="${detalleTransaccion.referencia}"></span>
+            <strong>CUENTA BENEFICIARIA:</strong><span th:text="${detalleTransaccion.cuentaBeneficiaria}"></span>
+            <strong>MONTO:</strong><span th:text="'$' + ${detalleTransaccion.monto}"></span>
+            <strong>CONCEPTO:</strong><span th:text="${detalleTransaccion.concepto}"></span>
+            <strong>FECHA:</strong><span th:text="${#dates.format(detalleTransaccion.fecha, 'dd/MM/yyy HH:mm:ss')}"></span>
+            <div class="button-container">
+                <a th:href="@{/inicio}">
+                    <button class="btn-cnc" type="button">CANCELAR</button>
+                </a>
+                <a th:href="@{/transaccion}">
+                    <button class="btn-env">REALIZAR OTRA</button>
+                </a>
+            </div>
+        </div>
+    </div>
+<th:block th:replace="~{fragments/footer :: footerLoginOn}"></th:block>
+<th:block th:replace="~{fragments/configs :: scriptJs}"></th:block>
+</body>
+</html>

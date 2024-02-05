@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+
+<head>
+    <th:block th:replace="~{fragments/configs :: headConfigs}"></th:block>
+    <link rel="stylesheet" href="/css/headerLoginOn.css">
+    <link rel="stylesheet" href="/css/activity.css">
+    <title>Movimientos</title>
+</head>
+<body>
+<div th:replace="~{fragments/header :: headerWithLoginOn}"></div>
+
+<div class="pag-name">
+    <h2>Movimientos</h2>
+</div>
+<div class="container">
+    <hr class="divider1">
+</div>
+
+<div class="main">
+    <div class="container">
+        <div class="container-activity">
+            <div class="document-btn-activity">
+                <div class="buttons">
+                    <form th:action="@{/export/excel}" method="get">
+                        <button class="btn">EXCEL</button>
+                    </form>
+
+                    <form th:action="@{/export/pdf}" method="get">
+                        <button class="btn">PDF</button>
+                    </form>
+                </div>
+            </div>
+            <div class="info">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="search-box">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i
+                                            class="fas fa-search"></i></span>
+                                </div>
+                                <input type="text" class="form-control" id="busqueda-entrante"
+                                       onkeyup="buscarTransaccionEntrante()"
+                                       placeholder="Buscar Transferencia Entrante">
+                            </div>
+                            <p class="mensajeErrorLista" id="mensajeErrorEntrante"><span></span></p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="search-box">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon2"><i
+                                            class="fas fa-search"></i></span>
+                                </div>
+                                <input type="text" class="form-control" id="busqueda-saliente"
+                                       onkeyup="buscarTransaccionSaliente()"
+                                       placeholder="Buscar Transferencia Saliente">
+                            </div>
+                            <p class="mensajeErrorLista" id="mensajeErrorSaliente"><span></span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <table class="left-table" id="entrantes">
+                        <thead>
+                        <tr>
+                            <th colspan="3">ENTRANTES</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <th:block th:if="${#lists.isEmpty(transferenciasEntrantes)}">
+                            <tr>
+                                <td colspan="3">Aun no tienes transacciones entrantes</td>
+                            </tr>
+                        </th:block>
+                        <div class="txt">
+                            <tr th:each="entrante : ${transferenciasEntrantes}">
+                                <td data-cy="reference-entrante" th:text="'Referencia: ' + ${entrante.referencia}">Entrada 1</td>
+                                <td data-cy="monto-entrante" th:text="'Monto: ' + '$' + ${entrante.monto}">Entrada 1</td>
+                                <td data-cy="date-entrante" th:text="'Fecha: ' + ${#dates.format(entrante.fecha, 'yyyyMMdd')}">Entrada 1</td>
+                            </tr>
+                        </div>
+                        </tbody>
+                    </table>
+                    <table class="right-table" id="salientes">
+                        <thead>
+                        <tr>
+                            <th colspan="3">SALIENTES</th>
+                        </tr>
+                        </thead>
+                        <tbody class="tabla-tabla">
+                        <th:block th:if="${#lists.isEmpty(transferenciasSalientes)}">
+                            <tr>
+                                <td colspan="3">Aun no tienes transacciones salientes</td>
+                            </tr>
+                        </th:block>
+                        <th:block th:unless="${#lists.isEmpty(transferenciasSalientes)}">
+                            <div class="txt2">
+                                <tr class="tabla231" th:each="saliente : ${transferenciasSalientes}">
+                                    <td class="sad" data-cy="reference" th:text="'Referencia: ' + ${saliente.referencia}">Entrada 1</td>
+                                    <td class="sad" data-cy="monto" th:text="'Monto: ' + '$' + ${saliente.monto}">Entrada 1</td>
+                                    <td class="sad" data-cy="fecha" th:text="'Fecha: ' + ${#dates.format(saliente.fecha, 'yyyyMMdd')}">Entrada 1</td>
+                                </tr>
+                            </div>
+
+                        </th:block>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<th:block th:replace="~{fragments/footer :: footerLoginOn}"></th:block>
+<th:block th:replace="~{fragments/configs :: scriptJs}"></th:block>
+<script th:src="@{/js/search.js}"></script>
+</body>
+</html>

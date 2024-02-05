@@ -1,0 +1,177 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+    <head>
+    <th:block th:replace="~{fragments/configs :: headConfigs}"></th:block>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/carrusel.css">
+    <link rel="stylesheet" href="/css/headerLoginOn.css">
+    <title>Banco agricola</title>
+</head>
+<body>
+    <div th:replace="~{fragments/header :: headerIndex}"></div>
+    <hr>
+    <section id="section-220">
+        <section class="">
+            <div class="home-bannerminimal backgroundwhite pt-5 pb-5" limbo-dom="imagen-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-9 col-md-6 col-lg-6 col-xl-6">
+                            <h1 class="h1banner fontsans-bold-56 colorblack">
+                                TransferBA
+                            </h1>
+                            <p class="paragrafbanner opensans-regular-14 colorblack">
+                                Desde tu <strong>TransferBA</strong> gestiona tus productos financieros sin salir de casa. Realiza tus operaciones bancarias en tu banca en línea cuando lo necesites.
+                            </p><br>
+
+                            <a class="btn m-auto" style="background: #fdda24; border-radius: 20px; color: black; font-weight: bold;" limbo-dom="link" th:href="@{/login}">INGRESA AQUÍ</a>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                            <section class="">
+                                <img loading="lazy" src="https://www.bancoagricola.com/multimedia/render/3299" alt="ebanca personas banco agricola" width="100%">
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <div class="pag-name">
+        <h2>¡Novedades!</h2>
+    </div>
+    <div class="container">
+        <hr class="divider1">
+    </div>
+    <div class="container-index">
+        <th:block th:replace="~{fragments/carrusel :: carrousel}" class="carruseldivision"></th:block> 
+    </div>
+    <section id="section-2408" style="">
+        <section class="backgroundwhite" style="padding-bottom: 30px">
+            <div class="container">
+                <div class="row">
+                    <div class="col cardhorizontalcol">
+                        <div class="row backgroundorange">
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                <div><img loading="lazy" class="img-fluid" src="https://www.bancoagricola.com/multimedia/render/7154" alt="Biblioteca digital Bancoagricola" width="100%"></div>
+                            </div>
+
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 align-self-center">
+                                <div class="borderadd">
+                                    <p class="mini-tittle">Sin moverte de tu casa</p>
+                                    <h3 class="title-service blue" limbo-dom="texto">Biblioteca Digital</h3>
+                                    <p class="second-text" limbo-dom="texto">Un espacio donde encuentras contenidos, tutoriales, videos y mucho más de nuestras Soluciones Digitales en Productos y Servicios.</p>
+                                    <button class="btn btn-primary btn-secondary" id="btn_biblioteca_digital" type="button" onclick="location.href = 'https://www.bancoagricola.com/biblioteca-digital'">Conoce más</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section> 
+    <div class="pag-name">
+        <h2>Transfer365 CA-RD</h2>
+    </div>
+    <div class="container">
+        <hr class="divider1">
+    </div>
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 align-self-center mt-3">
+        <section id="section-2448">
+            <section class="sectiongraysecond pl-5 pr-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <br>
+                            <br>
+                            <h2 class="three-holder" limbo-dom="texto">Características Transfer365 CA-RD</h2>
+                            <p class="third-text" limbo-dom="texto">Descubre las características de Transfer365 CA-RD.</p>
+                            <br>
+                            <br>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 top">
+                            <div class="row">
+                                <div class="col-3">
+                                    <img loading="lazy" class="img-fluid d-flex m-auto" limbo-dom="imagen" src="https://www.bancoagricola.com/multimedia/render/4874" alt="operado por el Banco Central de Reserva">
+
+                                </div>
+                                <div class="col-9">
+                                    <p class="third-text" limbo-dom="texto">Transfer365 CA-RD es operado por medio de la infraestructura de pagos de Banco Central de Reserva</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 top">
+                            <div class="row">
+                                <div class="col-3">
+                                    <img loading="lazy" class="img-fluid d-flex m-auto" limbo-dom="imagen" src="https://www.bancoagricola.com/multimedia/render/bb24pxrgbv01salario.png" alt="transferencias celular">
+
+                                </div>
+                                <div class="col-9">
+                                    <p class="third-text" limbo-dom="texto">Las transacciones realizadas por Transfer365 CA-RD, tienen cobro de $1+IVA y serán enviadas en US$.</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 top">
+                            <div class="row">
+                                <div class="col-3">
+                                    <img loading="lazy" class="img-fluid d-flex m-auto" limbo-dom="imagen" src="https://www.bancoagricola.com/multimedia/render/currency-exchange-1.png" alt="transferencias celular">
+
+                                </div>
+                                <div class="col-9">
+                                    <p class="third-text" limbo-dom="texto">Banco destino podrá realizar cargos por comisión por transacciones que resulten rechazadas, el cual se debitará del monto de la transacción devuelta.</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 top">
+                            <div class="row">
+                                <div class="col-3">
+                                    <img loading="lazy" class="img-fluid d-flex m-auto" limbo-dom="imagen" src="https://www.bancoagricola.com/multimedia/render/bb24pxrgbv01cuentas.png" alt="monto máximo de transferencia">
+
+                                </div>
+                                <div class="col-9">
+                                    <p class="third-text" limbo-dom="texto">Monto máximo de transferencia es de USD 25MM por transacción.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="backgroundwhite">
+                <div class="container">
+                    <div class="">
+                        <div class="cardhorizontalcol pt-3 pb-3">
+                            <div class="row mb-5">
+                                <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 align-self-center backgroundwhite pr-0 pl-0">
+                                    <div><img loading="lazy" class="" alt="Transfer365 recomendaciones Bancoagricola " src="https://www.bancoagricola.com/multimedia/render/7788" height="" style="width: 100%;"></div>
+                                </div>
+
+                                <div class="col-12 col-sm-12 col-md-9 col-lg-9 col-xl-9 align-self-center backgroundyellow">
+                                    <div class="borderadd">
+                                        <h2 class="fontsans-bold-28" limbo-dom="texto">Recomendaciones Transfer365 CA-RD</h2>
+
+                                        <p class="second-text" limbo-dom="texto" style="line-height: 19.5px">Conoce las mejores prácticas y recomendaciones para llenar la solicitud de envío.</p>
+                                        <br>
+                                        <a class="btn btn-primary btn-secondary" id="btn_recomendaciones_transfer" type="button" href="#" target="_blank">Descargar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </div>  
+<th:block th:replace="~{fragments/footer :: footerLoginOn}"></th:block>
+<th:block th:replace="~{fragments/configs :: scriptJs}"></th:block>
+</body>
+</html>

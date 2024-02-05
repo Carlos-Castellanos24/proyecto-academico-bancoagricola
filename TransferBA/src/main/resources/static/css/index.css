@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;1,300;1,400;1,500;1,600&display=swap');
+
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+.configs-size {
+    margin-left: 50px !important;
+    margin-right: 50px !important;
+}
+
+.justText {
+    padding-inline: 5px !important;
+    margin-top: 30px !important;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: Black !important;
+    font-weight: bold !important;
+
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: Black !important;
+    text-decoration: underline !important;
+}
+
+#section-2408 {
+    padding: 50px 0;
+}
+
+.backgroundwhite {
+    background-color: #fff;
+}
+
+
+.backgroundorange {
+    background-color: #ff7f41;
+    padding: 20px;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.mini-tittle {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+    display: revert;
+}
+
+.title-service {
+    font-family: fontsans-bold,Fallback,sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    color: #1a1b1a;
+}
+
+.second-text {
+    color: #1a1b1a;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.btn-primary {
+    background: 0 0;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 6px 25px;
+    height: auto;
+}
+
+.btn-primary:hover {
+    background-color: black; /* Change hover background color as needed */
+}
+.divider1 {
+    width: 100%;
+    border: none;
+    height: 2px;
+    background-color: #424242;
+    margin: 0;
+}
+.row.shadow {
+    margin: 0 0 25px;
+    padding: 0;
+}
+.nav-item a.nav-link, .tab-content>.active {
+    font-family: opensans-regular,Fallback,sans-serif;
+}
+.row.shadow.textbox-two, .sectiongraysecond, .sectiongraythree, .tarjetas-area .row .col-12.col-sm-6.col-md-6.col-lg-4.col-xl-4:nth-child(2n) .card, .tarjetas-area .row .col.col-12.col-md-6.col-lg-4:nth-child(2n) .item-comparador-tarjeta-cmp.cuentas-pref, .tarjetas-area .row .col.col-12.col-md-6.col-lg-4:nth-child(2n) .item-comparador-tarjeta.seguros, .tarjetas-area .row.tarjetas-area-row .col.col-12.col-md-6.col-lg-4:nth-child(2n) .item-comparador-tarjeta-cmp {
+    background-color: #f4f4f4;
+}
+.sectiongraysecond {
+    padding-bottom: 40px;
+}
+.three-holder {
+    color: #1a1b1a;
+    font-size: 28px;
+    font-weight: 300;
+    font-family: fontsans-light,Fallback,sans-serif;
+}
+section>.container>.row>.col-12>.third-text {
+    margin-bottom: 0;
+}
+.card-beneficios-opcion .card-beneficios-opcion-body .descripcion, .description-modal-gob, .four-text, .modal-body-pos, .second.text.left, .tab-content .tab-pane.fade.active.show p, .tab-content .tab-pane.fade.active.show table, .third-text {
+    color: #1a1b1a;
+    font-family: opensans-regular,Fallback,sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+.backgroundyellow {
+    background-color: #fdda24;
+}
+.borderadd {
+    padding: 5%;
+    border: 0;
+    min-height: 190px;
+    background-color: transparent;
+    width: 100%;
+}
+.tab-content>.active {
+    margin-top: 10px;
+    color: #1a1b1a;
+    font-weight: 400;
+    font-size: 14px;
+    display: block;
+    padding-left: 10px;
+}
+.fontsans-bold-28 {
+    font-size: 28px;
+}
+.fontsans-bold-18, .fontsans-bold-24, .fontsans-bold-28, .fontsans-bold-32, .fontsans-bold-40, .fontsans-bold-56, .fontsans-bold-72 {
+    font-family: fontsans-bold,Fallback,sans-serif;
+    font-weight: 700;
+}
+.fontsans-bold-18, .item-comparador-tarjeta-descripcion, .item-comparador-tarjeta-nombre, .mini-tittle, .second-text, .third-text, .title-service.white.flat {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+    display: revert;
+}
+
+.icons-cards-inversiones {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px
+}
+
+.margin-zero {
+    margin: 0
+}
+
+.promociones-margin {
+    margin: 15px 0
+}
+
+.container-p-card-promociones {
+    margin: 25px 0
+}
+
+.container-cards-promociones {
+    margin: 5% 0
+}
+
+.modal-content.second {
+    padding: 20px
+}
+
+.cards-thin-btn {
+    margin-left: 20px
+}
+
+.cards-thin {
+    height: auto;
+    width: 294px;
+    margin-bottom: 5%
+}
+
+.card-large {
+    height: 430px;
+    margin: 30px 0
+}
+.backgroundwhite {
+    background-color: #fff;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+

@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;1,300;1,400;1,500;1,600&display=swap');
+
+body {
+    background: url(https://www.ebanca.com/img/06.svg);
+    font-family: 'Open Sans', sans-serif !important;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.pag-name {
+    margin-top: 3%;
+    width: 100%;
+    text-align: center;
+}
+
+.pag-name h2 {
+    font-weight: bold;
+    font-family: 'Open Sans', 'sans-serif';
+    text-transform: uppercase;
+}
+
+.container-lists {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start; /* Ajusta según tus necesidades de alineación vertical */
+}
+
+.accounts {
+    width: 25%;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0 5px 10px; /* Ajusta el margen según tus necesidades */
+}
+
+.account-details {
+    width: 100%;
+    max-width: 100%; /* O el valor que desees */
+    box-sizing: border-box;
+    padding: 20px;
+    border: 1px solid #a6a6a6;
+    border-radius: 8px;
+}
+
+.data-txt-details {
+    margin-top: 10px;
+}
+
+.divider1 {
+    width: 100%;
+    border: none;
+    height: 2px;
+    background-color: #424242;
+    margin: 20px 0;
+}
+.document-btn-activity {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.buttons {
+    display: flex;
+}
+
+.btn {
+    flex: 1;
+    border-radius: 50px;
+    background-color: #fdda24;
+    color: #212529;
+    margin: 10px;
+    padding: 8px 16px;
+        font-size: 17px;
+}
+
+.second {
+    width: 100%;
+    border: none;
+    height: 2px;
+    background-color: #424242;
+    margin: 20px 0;
+
+}
+
+.divider2 {
+    width: 85%;
+
+}
+
+.buttons {
+    margin-top: auto;
+    text-align: center;
+}
+
+.btnTrans {
+    border-radius: 50px;
+    background-color: #fdda24;
+    color: #212529;
+    margin: 100px;
+    padding: 10px 20px;
+    margin-top: 50px;
+}
+
+.btnMov {
+    border-radius: 50px;
+    background-color: #fdda24;
+    color: #212529;
+    margin: 100px;
+    padding: 10px 20px;
+    margin-top: 50px;
+}

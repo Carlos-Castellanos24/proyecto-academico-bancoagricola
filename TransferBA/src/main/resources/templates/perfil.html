@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+
+    <head>
+    <th:block th:replace="~{fragments/configs :: headConfigs}"></th:block>
+    <link rel="stylesheet" href="/css/headerLoginOn.css">
+    <link rel="stylesheet" href="/css/profile.css">
+    <title>perfil</title>
+</head>
+
+<body>
+    <div th:replace="~{fragments/header :: headerWithLoginOn}"></div>
+    <div class="pag-name">
+        <h2>Perfil</h2>
+    </div>
+    <div class="container">
+        <hr class="divider1">
+    </div>
+    <div class="main">
+        <div class="container">
+            <div class="info-profile-username">
+                <div class="dtsPersonales">
+                    <span class="profile-tittle"><i class="fa-solid fa-user-large"></i> Datos Personales:</span><br>
+                    <div class="elementos-profile">
+                        <div class="profile-element-r">
+                            <span class="profile-sub-tittle">Nombre: </span>
+                            <span th:text="${nombreCliente}"></span>
+                        </div>
+                        <div class="profile-element-l">
+                            <span class="profile-sub-tittle">Documento: </span>
+                            <span th:text="${duiCliente}"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contactos-personales">
+                    <span class="profile-tittle"><i class="fa-solid fa-address-card"></i> Contacto:</span><br>
+                    <div class="elementos-profile">
+                        <div class="profile-element-r">
+                            <span class="profile-sub-tittle">Correo Electronico: </span>
+                            <span th:text="${correoCliente}"></span>
+                        </div>
+                        <div class="profile-element-l">
+                            <span class="profile-sub-tittle">Telefono: </span>
+                            <span th:text="${numeroCliente}"></span>
+                        </div>
+                    </div>
+                </div>
+                <span class="profile-tittle"><i class="fa-solid fa-piggy-bank"></i> Cuentas:</span>
+                <div th:each="lista : ${listaCuentasCliente}">
+                    <div class="accounts">
+                        <div class="account-details">
+                            <div class="account-element-details">
+                                <div class="data-txt-details">
+                                    <strong>Propietario: </strong><span th:text="${lista.cliente.nombre} + ' ' + ${lista.cliente.apellido}"></span>
+                                </div>
+                                <div class="data-txt-details">
+                                    <strong>Tipo de cuenta: </strong><span th:text="${lista.cuenta.tipoCuenta.nombre}"></span>
+                                </div>
+                                <div class="data-txt-details">
+                                    <strong>Saldo: </strong><span th:text="${lista.cuenta.saldo}"></span>
+                                </div>
+                                <div class="data-txt-details">
+                                    <strong>Numero de cuenta: </strong><span th:text="${lista.cuenta.numeroCuenta}"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<th:block th:replace="~{fragments/footer :: footerLoginOn}"></th:block>
+<th:block th:replace="~{fragments/configs :: scriptJs}"></th:block>
+</body>
+
+</html>

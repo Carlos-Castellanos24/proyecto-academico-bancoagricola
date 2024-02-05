@@ -1,0 +1,57 @@
+<!--header en el login-->
+<div th:fragment="headerLogin" class="header-login">
+    <div class="container-fluid">
+        <a th:href="@{/inicio}"><img src="/images/logo_ba.png" alt="Logo" class="logo-login"></a>
+    </div>
+</div>
+
+<div th:fragment="headerWithLoginOn" class="header-login">
+    <div class="container-fluid">
+        <a th:href="@{/inicio}"><img src="/images/logo_ba.png" alt="Logo" class="logo-login"></a>
+    </div>
+    <div class="title">T R A N S F E R B A</div>
+    <div class="content-username">
+        <div class="dropdown">
+            <i class="fa-regular fa-user fa-2x profileImage" data-toggle="dropdown">
+                <strong class="username-text" th:text="${nombre.split(' ')[0] + ' ' + nombre.split(' ')[2]} "></strong>
+            </i>
+            <div class="dropdown-menu use-profile" aria-labelledby="dropdownMenu2">
+                <a th:href="@{/perfil}">
+                    <button class="dropdown-item btn-hoover" type="button">Perfil</button>
+                </a>
+                <a th:href="@{/cerrarSesion}">
+                    <button class="dropdown-item btn-hoover" type="button">Cerrar sesión</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div th:fragment="headerIndex" class="header-index navbar navbar-expand-lg bg-body-tertiary configs-size">
+    <div class="container-fluid">
+        <a th:href="@{/}"><img src="/images/logo_ba.png" alt="Logo" class="logo-login"></a>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 s-header">
+            <li class="nav-item justText">
+                <a class="nav-link" href="https://www.bancoagricola.com/cuentas-personas">Cuentas</a>
+            </li>
+            <li class="nav-item justText">
+                <a class="nav-link" href="https://www.bancoagricola.com/tarjetas">Tarjetas</a>
+            </li>
+            <li class="nav-item justText">
+                <a class="nav-link" href="https://www.bancoagricola.com/creditos-personas">Créditos</a>
+            </li>
+            <li class="nav-item justText">
+                <a class="nav-link" href="https://www.bancoagricola.com/inversiones">Inversiones</a>
+            </li>
+            <li class="nav-item justText">
+                <a class="nav-link" href="https://www.bancoagricola.com/seguros">Seguros</a>
+            </li>
+            <li class="nav-item justText">
+                <a class="nav-link" href="https://www.bancoagricola.com/promociones">Promociones</a>
+            </li>
+            <li class="nav-item justText login-menu">
+                <a class="nav-link btn" style="background: #fdda24; border-radius: 20px;" th:href="@{/login}">TransferBA</a>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+    <th:block th:replace="~{fragments/configs :: headConfigs} "></th:block>
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/headerLoginOn.css">
+    <title>Login</title>
+</head>
+<body>
+<!--header-->
+<div th:replace="~{fragments/header :: headerIndex}"></div>
+<hr>
+<div class="container content-data-footer">
+    <div class="center-card">
+        <div class="card">
+            <div class="card-header">
+                <h3>Bienvenido a TransferBA</h3>
+            </div>
+            <div class="card-body">
+                <form th:action="@{/validarLogin}" method="post" id="login-form">
+                    <div class="alert alert-danger" id="error-alert" style="display: none;"></div>
+                    <div class="alert alert-success" id="success-alert" style="display: none;"></div>
+                    <div class="form-group">
+                        <label for="username">Usuario</label>
+                        <input type="text" class="form-control" id="username" name="username"
+                               placeholder="Ingrese su nombre de usuario" required="true">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Contraseña</label>
+                        <input type="password" class="form-control" id="password" name="clave"
+                               placeholder="Ingresa tu contraseña" required="true">
+                    </div>
+                    <div th:if="${cuentaInactiva != null}">
+                        <p><span class="span-error">[[${cuentaInactiva}]]</span></p>
+                    </div>
+                    <div th:if="${userInactivo != null}">
+                        <p><span class="span-error">[[${userInactivo}]]</span></p>
+                    </div>
+                    <div th:if="${usuarioNotFound != null}">
+                        <p><span class="span-error">[[${usuarioNotFound}]]</span></p>
+                    </div>
+                    <div th:if="${credencialesInvalidas != null}">
+                        <p><span class="span-error">[[${credencialesInvalidas}]]</span></p>
+                    </div>
+                    <p class="mt-3"> <a th:href="@{/olvidarPassword}" style="font-size: 16px;text-decoration: underline;font-weight: 600;color: black;">¿Olvidaste tu contraseña?</a></p>
+                        <button type="submit" style="background: #fdda24; border-radius: 10px; font-weight: bold;" class="btn btn-block" id="login-button">CONTINUAR</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<th:block th:replace="~{fragments/footer :: footerLoginOn}"></th:block>
+<th:block th:replace="~{fragments/configs :: scriptJs}"></th:block>
+</body>
+
+</html>
